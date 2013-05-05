@@ -7,11 +7,7 @@ $grid-padding: 20px;
 .grid {
   width: 100%;
   background-color: blue;
-  &:after {
-    content: "";
-    display: table;
-    clear: both;
-  }
+  @include clearfix;
 }
 
 [class*='col-'] {
@@ -29,8 +25,7 @@ $grid-padding: 20px;
   }
 }
 
-/* Columns */
-
+// Columns
 .col-1-1, .col-2-2, .col-3-3, .col-4-4, .col-5-5, .col-6-6,
 .col-7-7, .col-8-8, .col-9-9, .col-10-10, .col-11-11, .col-12-12 {
   width: 100%;

@@ -1,0 +1,12 @@
+@import "../modules/all";
+// Navbar
+$navbarHeight: 100px;
+$navbarPaddingHorizontal: 20px;
+
+// Typography
+$baseLineHeight: 20px;
+$baseFontSize: 14px;
+
+// Links
+$baseLinkColor: #08c;
+$baseLinkHoverColor: darken($baseLinkColor, 15%);

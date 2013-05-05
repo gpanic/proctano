@@ -1,0 +1,14 @@
+.navbar {
+  height: $navbarHeight;
+  background-color: aqua;
+  ul {
+    li {
+      float: left;
+      @include paddingCenter($baseLineHeight, $navbarHeight, $navbarPaddingHorizontal);
+      a {
+        display: block;
+      }
+    }
+  }
+  @include clearfix;
+}

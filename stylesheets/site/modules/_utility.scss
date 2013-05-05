@@ -1,0 +1,23 @@
+// General
+// --------------------------------------------------
+
+// Cross browser prefixes
+@mixin prefix($property, $value) {
+  -webkit-#{$property}: $value;
+  -moz-#{$property}: $value;
+  #{$property}: $value;
+}
+
+// Clearfix
+@mixin clearfix {
+  &:after {
+    content: "";
+    display: table;
+    clear: both;
+  }
+}
+
+// Adds padding to vertially center the element
+@mixin paddingCenter($lineHeight, $containerHeight, $horizontalPadding) {
+  padding: ($containerHeight - $lineHeight) / 2 $horizontalPadding;
+}

@@ -1,0 +1,13 @@
+body {
+  line-height: $baseLineHeight;
+  font-size: $baseFontSize;
+}
+
+a {
+  color: $baseLinkColor;
+  text-decoration: none;
+  &:hover, &:focus {
+    color: $baseLinkHoverColor;
+    text-decoration: underline;
+  }
+}
