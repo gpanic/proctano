@@ -1,11 +1,24 @@
 @import "../modules/all";
+
 // Navbar
 $navbarHeight: 100px;
 $navbarPaddingHorizontal: 20px;
+$navbarFontSize: 16px;
+$navbarTextColor: black;
+$navbarBackgroundColor: #f2f2f2;
+$navbarBrandTextColor: #262626;
+$navbarBrandTextSize: 40px;
+$navbarLogoHeight: 75px;
+$navbarLogoWidth: 75px;
+
+// Images
+$logoUrl: url('../images/proctano_logo.svg');
 
 // Typography
+$baseFontFamily: $sansSerifFontFamily;
+$baseFontSize: 16px;
 $baseLineHeight: 20px;
-$baseFontSize: 14px;
+// $baseTextColor:;
 
 // Links
 $baseLinkColor: #08c;

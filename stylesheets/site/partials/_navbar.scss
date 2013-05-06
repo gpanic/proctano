@@ -1,14 +1,55 @@
 .navbar {
+  font-size: $navbarFontSize;
   height: $navbarHeight;
-  background-color: aqua;
   ul {
     li {
       float: left;
-      @include paddingCenter($baseLineHeight, $navbarHeight, $navbarPaddingHorizontal);
-      a {
-        display: block;
-      }
     }
   }
   @include clearfix;
+}
+
+.navbar ul li a {
+  display: block;
+  color: $navbarTextColor;
+  @include paddingCenter($baseLineHeight, $navbarHeight, $navbarPaddingHorizontal);
+  &:hover {
+    text-decoration: none;
+  }
+}
+
+.navbar ul li {
+  &.logo {
+    padding: 12.5px 0px;
+  }
+  &.brand {
+    @include paddingCenter($baseLineHeight, $navbarHeight, $navbarPaddingHorizontal);
+  }
+  &.logo a {
+    background-image: $logoUrl; 
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: $navbarLogoWidth $navbarLogoHeight;
+    width: $navbarLogoWidth;
+    height: $navbarLogoHeight;
+    display: inline-block;
+    padding: 0;
+  }
+  &.brand a {
+    font-family: 'Sansation Light';
+    font-size: $navbarBrandTextSize;
+    color: $navbarBrandTextColor;
+    padding: 0;
+    @include prefix(text-stroke, 1.5px $navbarBrandTextColor);
+  }
+}
+
+.navbar-header {
+  background-color: $navbarBackgroundColor;
+}
+
+.fixed-top {
+  position: fixed;
+  top: 0;
+  width: 100%;
 }

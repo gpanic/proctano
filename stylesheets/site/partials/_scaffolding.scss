@@ -1,6 +1,7 @@
 body {
-  line-height: $baseLineHeight;
+  font-family: $baseFontFamily;
   font-size: $baseFontSize;
+  line-height: $baseLineHeight;
 }
 
 a {

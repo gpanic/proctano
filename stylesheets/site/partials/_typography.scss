@@ -1,8 +1,21 @@
 @font-face {
-  font-family: 'SansationRegular';
-  src: url('sansation_regular.eot');
-  src: url('sansation_regular.eot') format('embedded-opentype'),
-  url('sansation_regular.woff') format('woff'),
-  url('sansation_regular.ttf') format('truetype'),
-  url('sansation_regular.svg#SansationRegular') format('svg');
+  font-family: 'Sansation Regular';
+  src: url('../fonts/sansation_regular-webfont.eot');
+  src: url('../fonts/sansation_regular-webfont.eot?#iefix') format('embedded-opentype'),
+    url('../fonts/sansation_regular-webfont.woff') format('woff'),
+    url('../fonts/sansation_regular-webfont.ttf') format('truetype'),
+    url('../fonts/sansation_regular-webfont.svg#sansationregular') format('svg');
+  font-weight: normal;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: 'Sansation Light';
+  src: url('../fonts/sansation_light-webfont.eot');
+  src: url('../fonts/sansation_light-webfont.eot?#iefix') format('embedded-opentype'),
+    url('../fonts/sansation_light-webfont.woff') format('woff'),
+    url('../fonts/sansation_light-webfont.ttf') format('truetype'),
+    url('../fonts/sansation_light-webfont.svg#sansation_lightregular') format('svg');
+  font-weight: normal;
+  font-style: normal;
 }
