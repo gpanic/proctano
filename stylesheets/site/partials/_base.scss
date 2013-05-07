@@ -2,14 +2,15 @@
 
 // Navbar
 $navbarHeight: 100px;
-$navbarPaddingHorizontal: 20px;
+$navbarPaddingHorizontal: 10px;
 $navbarFontSize: 16px;
-$navbarTextColor: black;
-$navbarBackgroundColor: #f2f2f2;
-$navbarBrandTextColor: #262626;
-$navbarBrandTextSize: 40px;
+$navbarTextColor: #333333;
+$navbarBackgroundColor: rgba(242, 242, 242, 0.95);
+$navbarBrandTextColor: #333333;
+$navbarBrandTextSize: 35px;
 $navbarLogoHeight: 75px;
 $navbarLogoWidth: 75px;
+$navbarHoverTextColor: #8d6aad;
 
 // Images
 $logoUrl: url('../images/proctano_logo.svg');
@@ -23,3 +24,4 @@ $baseLineHeight: 20px;
 // Links
 $baseLinkColor: #08c;
 $baseLinkHoverColor: darken($baseLinkColor, 15%);
+$hoverTransitionTime: 0.3s;
