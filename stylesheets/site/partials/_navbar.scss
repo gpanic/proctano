@@ -43,12 +43,12 @@
     border-bottom: none;
   }
   &.brand a {
-    font-family: 'Sansation Regular';
+    font-family: TitilliumText25L250wt;
     font-size: $navbarBrandTextSize;
     color: $navbarBrandTextColor;
     padding: 0;
     position: relative;
-    top: -3px;
+    //top: -3px;
     transition: color $hoverTransitionTime;
     border-bottom: none;
     &:hover {
@@ -64,6 +64,7 @@
 .navbar-header {
   background-color: $navbarBackgroundColor;
   border-top: $navbarStroke solid $navbarStrokeColor;
+  box-shadow: 0 0 5px 1px rgba(0,0,0,0.4);
 }
 
 .fixed-top {
