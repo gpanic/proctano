@@ -2,13 +2,19 @@
   //background: linear-gradient(45deg, #A693BA, #A693BA 50%, #9272B7 50%, #9272B7 100%)
   h1 {
     font-family: 'TitilliumText25L1wt';
-    font-size: 30px;
-    padding: 22px 0px 10px 0px;
+    font-size: 35px;
+    padding: 10px 0px;
+    margin-top: 30px;
+    margin-bottom: 20px;
+  }
+  p {
   }
 }
 
 .content header {
-  background-image: url(../images/proctano_pattern.svg);
+  //background-image: url(../images/proctano_pattern.svg);
+  //background-color: #F54F29;
+  background: linear-gradient(45deg, $red, $red 50%, lighten($red, 4%) 50%, lighten($red, 4%) 100%)
 }
 
 .content-header {
