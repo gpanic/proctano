@@ -2,6 +2,7 @@ body {
   font-family: $baseFontFamily;
   font-size: $baseFontSize;
   line-height: $baseLineHeight;
+  padding-top: $navbarHeight + $navbarStroke;
 }
 
 a {

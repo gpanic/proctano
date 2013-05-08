@@ -1,9 +1,10 @@
 .navbar {
   font-size: $navbarFontSize;
-  height: $navbarHeight;
+  height: $navbarHeight + $navbarStroke;
   ul {
     li {
       float: left;
+      height: $navbarHeight;
     }
   }
   @include clearfix;
@@ -12,21 +13,23 @@
 .navbar ul li a {
   display: block;
   color: $navbarTextColor;
+  border-bottom: $navbarHoverStroke solid transparent;
   transition: color $hoverTransitionTime;
-  @include paddingCenter($baseLineHeight, $navbarHeight, $navbarPaddingHorizontal);
+  transition: border-bottom-color $hoverTransitionTime;
+  @include paddingCenterStroke($baseLineHeight, $navbarHeight, $navbarPaddingHorizontal, $navbarHoverStroke);
   &:hover {
     text-decoration: none;
     color: $navbarHoverTextColor;
-    border-bottom: 2px solid #8d6aad;
+    border-bottom: $navbarHoverStroke solid $navbarHoverTextColor;
   }
 }
 
 .navbar ul li {
   &.logo {
-    padding: 12.5px 0px;
+    @include paddingCenter($navbarLogoHeight, $navbarHeight, 0px);
   }
   &.brand {
-    @include paddingCenter($baseLineHeight, $navbarHeight, 20px);
+    @include paddingCenter($baseLineHeight, $navbarHeight, 10px);
   }
   &.logo a {
     background-image: $logoUrl; 
@@ -40,27 +43,32 @@
     border-bottom: none;
   }
   &.brand a {
-    font-family: 'Sansation Light';
+    font-family: 'Sansation Regular';
     font-size: $navbarBrandTextSize;
     color: $navbarBrandTextColor;
     padding: 0;
     position: relative;
-    top: -4px;
+    top: -3px;
     transition: color $hoverTransitionTime;
     border-bottom: none;
     &:hover {
       color: $navbarHoverTextColor;
     }
   }
+  &.divider {
+    cursor: default;
+    @include paddingCenterStroke($baseLineHeight, $navbarHeight, $navbarPaddingHorizontal, $navbarHoverStroke);
+  }
 }
 
 .navbar-header {
   background-color: $navbarBackgroundColor;
+  border-top: $navbarStroke solid $navbarStrokeColor;
 }
 
 .fixed-top {
-  position: fixed;
   top: 0;
+  position: fixed;
   width: 100%;
-  height: $navbarHeight;
+  height: $navbarHeight + $navbarStroke;
 }
