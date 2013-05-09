@@ -5,6 +5,7 @@
     li {
       float: left;
       height: $navbarHeight;
+      @include paddingCenterHighlight($baseLineHeight, $navbarHeight, $navbarPaddingHorizontal, $navbarHoverStroke);
     }
   }
   @include clearfix;
@@ -14,13 +15,11 @@
   display: block;
   color: $navbarTextColor;
   border-bottom: $navbarHoverStroke solid transparent;
-  transition: color $hoverTransitionTime;
-  transition: border-bottom-color $hoverTransitionTime;
-  @include paddingCenterStroke($baseLineHeight, $navbarHeight, $navbarPaddingHorizontal, $navbarHoverStroke);
+  transition: color $hoverTransitionTime ease-in-out, border-bottom-color $hoverTransitionTime ease-in-out;
   &:hover {
     text-decoration: none;
-    color: $navbarHoverTextColor;
-    border-bottom: $navbarHoverStroke solid $navbarHoverTextColor;
+    color: $navbarHighlightColor;
+    border-bottom-color: $navbarHighlightColor;
   }
 }
 
@@ -29,13 +28,13 @@
     @include paddingCenter($navbarLogoHeight, $navbarHeight, 0px);
   }
   &.brand {
-    @include paddingCenter($baseLineHeight, $navbarHeight, 10px);
+    @include paddingCenter($baseLineHeight, $navbarHeight, $navbarPaddingHorizontal * 2);
   }
   &.logo a {
-    background-image: $logoUrl; 
+    background-image: $logo; 
     background-position: center;
     background-repeat: no-repeat;
-    background-size: $navbarLogoWidth $navbarLogoHeight;
+    background-size: contain;
     width: $navbarLogoWidth;
     height: $navbarLogoHeight;
     display: inline-block;
@@ -43,7 +42,7 @@
     border-bottom: none;
   }
   &.brand a {
-    font-family: TitilliumText25L250wt;
+    font-family: 'HattoriHanzoLight';
     font-size: $navbarBrandTextSize;
     color: $navbarBrandTextColor;
     padding: 0;
@@ -52,18 +51,20 @@
     transition: color $hoverTransitionTime;
     border-bottom: none;
     &:hover {
-      color: $navbarHoverTextColor;
+      color: $navbarHighlightColor;
     }
   }
   &.divider {
     cursor: default;
-    @include paddingCenterStroke($baseLineHeight, $navbarHeight, $navbarPaddingHorizontal, $navbarHoverStroke);
+    @include paddingCenter($baseLineHeight, $navbarHeight, $navbarPaddingHorizontal);
+    position: relative;
+    top: -1px;
   }
 }
 
 .navbar-header {
   background-color: $navbarBackgroundColor;
-  border-top: $navbarStroke solid $navbarStrokeColor;
+  border-top: $navbarStroke solid $navbarHighlightColor;
   box-shadow: 0 0 5px 1px rgba(0,0,0,0.4);
 }
 

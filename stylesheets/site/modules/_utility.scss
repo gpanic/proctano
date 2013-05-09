@@ -26,7 +26,7 @@
   padding: ($containerHeight - $lineHeight) / 2 $horizontalPadding;
 }
 
-// Adds padding to vertiaclly center the element with a bottom border
-@mixin paddingCenterStroke($lineHeight, $containerHeight, $horizontalPadding, $highlightStroke) {
-  padding: ($containerHeight - $lineHeight) / 2 $horizontalPadding (($containerHeight - $lineHeight) / 2) - $highlightStroke $horizontalPadding;
+@mixin paddingCenterHighlight($lineHeight, $containerHeight, $horizontalPadding, $stroke) {
+  padding: (($navbarHeight - $lineHeight) / 2) $horizontalPadding (($navbarHeight - $lineHeight) / 2) - $stroke $horizontalPadding;
 }
+
