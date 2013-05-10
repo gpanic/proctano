@@ -1,0 +1,59 @@
+.content header {
+  background: linear-gradient(
+                45deg,
+                $cHeadBackgroundColor,
+                $cHeadBackgroundColor 50%,
+                lighten($cHeadBackgroundColor, 4%) 50%,
+                lighten($cHeadBackgroundColor, 4%) 100%
+              );
+}
+
+.content-header {
+  color: $cHeadTextColor;
+  font-family: $cHeadFontFamily;
+  font-size: $cHeadFontSize;
+  font-weight: $cHeadFontWeight;
+  height: $cHeadHeight;
+  line-height: 1em;
+  text-align: center;
+  width: 100%;
+  @include centerPad($cHeadFontSize, $cHeadHeight, 0px);
+}
+
+.separation {
+  height: $cHeadSeparationHeight;
+  position: relative;
+  overflow: hidden;
+}
+
+@mixin sep($left, $margin-left) {
+  background-color: $mainBackgroundColor;
+  height: $cHeadSeparationHeight;
+  left: $left;
+  margin-left: $margin-left;
+  position: absolute;
+  width: 50%;
+  &:after {
+    content: '';
+    display: inline-block;
+    width: 0;
+    height: 0;
+    border-left: $cHeadSeparationWidth / 2 solid transparent;
+    border-right: $cHeadSeparationWidth / 2 solid transparent;
+    border-bottom: $cHeadSeparationHeight solid $mainBackgroundColor;
+    position: absolute;
+  }
+}
+
+.sep-left {
+  @include sep(0%, - $cHeadSeparationWidth / 2);
+  &:after {
+    right: - $cHeadSeparationWidth / 2;
+  }
+}
+.sep-right {
+  @include sep(50%, $cHeadSeparationWidth / 2);
+  &:after {
+    left: - $cHeadSeparationWidth / 2;
+  }
+}

@@ -1,21 +1,32 @@
 .navbar {
-  font-size: $navbarFontSize;
+  background-color: $navbarBackgroundColor;
+  border-top: $navbarStroke solid $navbarHighlightColor;
+  box-shadow: 0 0 5px 1px rgba(0,0,0,0.4);
+  z-index: 100;
+}
+
+.navbar-inner {
   height: $navbarHeight + $navbarStroke;
   ul {
     li {
       float: left;
       height: $navbarHeight;
-      @include paddingCenterHighlight($baseLineHeight, $navbarHeight, $navbarPaddingHorizontal, $navbarHoverStroke);
+      @include centerPad($navbarFontSize + 2 * $navbarHoverPad, $navbarHeight, $navbarPaddingHorizontal)
     }
   }
   @include clearfix;
 }
 
-.navbar ul li a {
-  display: block;
-  color: $navbarTextColor;
+.navbar-inner ul li a {
+  padding: $navbarHoverPad 0px;
+  font-size: $navbarFontSize;
+  line-height: 1em;
   border-bottom: $navbarHoverStroke solid transparent;
-  transition: color $hoverTransitionTime ease-in-out, border-bottom-color $hoverTransitionTime ease-in-out;
+  color: $navbarTextColor;
+  display: block;
+  font-weight: $navbarFontWeight;
+  transition: color $hoverTransitionTime ease-in-out,
+              border-bottom-color $hoverTransitionTime ease-in-out;
   &:hover {
     text-decoration: none;
     color: $navbarHighlightColor;
@@ -23,49 +34,45 @@
   }
 }
 
-.navbar ul li {
+.navbar-inner ul li {
   &.logo {
-    @include paddingCenter($navbarLogoHeight, $navbarHeight, 0px);
+    @include centerPad($navbarLogoHeight, $navbarHeight, 0px);
+    a {
+      padding: 0;
+      background-image: $logo; 
+      background-position: center;
+      background-repeat: no-repeat;
+      background-size: contain;
+      border-bottom: none;
+      height: $navbarLogoHeight;
+      transition: none;
+      width: $navbarLogoWidth;
+    }
   }
   &.brand {
-    @include paddingCenter($baseLineHeight, $navbarHeight, $navbarPaddingHorizontal * 2);
-  }
-  &.logo a {
-    background-image: $logo; 
-    background-position: center;
-    background-repeat: no-repeat;
-    background-size: contain;
-    width: $navbarLogoWidth;
-    height: $navbarLogoHeight;
-    display: inline-block;
-    padding: 0;
-    border-bottom: none;
-  }
-  &.brand a {
-    font-family: 'HattoriHanzoLight';
-    font-size: $navbarBrandTextSize;
-    color: $navbarBrandTextColor;
-    padding: 0;
-    position: relative;
-    //top: -3px;
-    transition: color $hoverTransitionTime;
-    border-bottom: none;
-    &:hover {
-      color: $navbarHighlightColor;
+    @include centerPad($navbarBrandTextSize, $navbarHeight, $navbarPaddingHorizontal * 2);
+    a {
+      padding: 0;
+      border-bottom: none;
+      color: $navbarBrandTextColor;
+      font-family: $navbarBrandFontFamily;
+      font-size: $navbarBrandTextSize;
+      font-weight: $navbarBrandFontWeight;
+      line-height: $navbarBrandTextSize;
+      transition: color $hoverTransitionTime;
+      &:hover {
+        color: $navbarHighlightColor;
+      }
     }
   }
   &.divider {
+    font-size: $navbarFontSize;
+    line-height: 1em;
     cursor: default;
-    @include paddingCenter($baseLineHeight, $navbarHeight, $navbarPaddingHorizontal);
+    @include centerPad($navbarFontSize, $navbarHeight, $navbarPaddingHorizontal);
     position: relative;
     top: -1px;
   }
-}
-
-.navbar-header {
-  background-color: $navbarBackgroundColor;
-  border-top: $navbarStroke solid $navbarHighlightColor;
-  box-shadow: 0 0 5px 1px rgba(0,0,0,0.4);
 }
 
 .fixed-top {

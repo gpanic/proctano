@@ -1,29 +1,46 @@
 @import "../modules/all";
 
+// Scaffolding
+$mainBackgroundColor: white;
+
 // Navbar
 $navbarBackgroundColor: rgba(255, 255, 255, 0.95);
+$navbarBrandFontFamily: $sansSerifFontFamily;
 $navbarBrandTextColor: $gray;
-$navbarBrandTextSize: 30px;
-$navbarFontSize: 14px;
+$navbarBrandTextSize: 21px;
+$navbarBrandFontWeight: 600;
+$navbarFontSize: 15px;
+$navbarFontWeight: 200;
 $navbarHeight: 80px;
 $navbarHighlightColor: $blue;
 $navbarHoverStroke: 1px;
+$navbarHoverPad: 5px;
 $navbarLogoHeight: 60px;
 $navbarLogoWidth: 47px;
 $navbarPaddingHorizontal: 10px;
 $navbarStroke: 0px;
 $navbarTextColor: $gray;
 
+// Content Header
+$cHeadBackgroundColor: $blue;
+$cHeadHeight: 100px;
+$cHeadTextColor: white;
+$cHeadFontFamily: $sansSerifFontFamily;
+$cHeadFontWeight: 200;
+$cHeadFontSize: 36px;
+$cHeadSeparationHeight: 20px;
+$cHeadSeparationWidth: 150px;
+
 // Images
 $logo: url('../images/proctano_logo.svg');
 
 // Typography
 $baseFontFamily: $sansSerifFontFamily;
-$baseFontSize: 16px;
-$baseLineHeight: 20px;
+$baseFontSize: 18px;
+$baseLineHeight: 1.4em;
 $baseTextColor: $gray;
 
 // Links
-$baseLinkColor: #08c;
-$baseLinkHoverColor: darken($baseLinkColor, 15%);
+$baseLinkColor: $blue;
+$baseLinkHoverColor: darken($baseLinkColor, 20%);
 $hoverTransitionTime: 0.2s;

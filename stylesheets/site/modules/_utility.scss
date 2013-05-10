@@ -17,16 +17,11 @@
   }
 }
 
-@mixin navbarLinkPadding($lineHeight, $navbarHeight, $highlightStroke, $horizontalPadding) {
-  padding: (($navbarHeight - $lineHeight) / 2) $horizontalPadding (($navbarHeight - $lineHeight) / 2) - $highlightStroke $horizontalPadding;
+@mixin navbarLinkPad($lineHeight, $containerHeight, $stroke, $horizontalPadding) {
+  padding: (($containerHeight - $lineHeight) / 2) $horizontalPadding (($containerHeight - $lineHeight) / 2) - $stroke $horizontalPadding;
 }
 
 // Adds padding to vertially center the element
-@mixin paddingCenter($lineHeight, $containerHeight, $horizontalPadding) {
+@mixin centerPad($lineHeight, $containerHeight, $horizontalPadding) {
   padding: ($containerHeight - $lineHeight) / 2 $horizontalPadding;
 }
-
-@mixin paddingCenterHighlight($lineHeight, $containerHeight, $horizontalPadding, $stroke) {
-  padding: (($navbarHeight - $lineHeight) / 2) $horizontalPadding (($navbarHeight - $lineHeight) / 2) - $stroke $horizontalPadding;
-}
-
