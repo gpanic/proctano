@@ -1,4 +1,4 @@
-$grid-padding: 20px;
+$grid-padding: $baseLineHeight;
 
 *, *:after, *:before {
   @include prefix(box-sizing, border-box);
@@ -6,8 +6,13 @@ $grid-padding: 20px;
 
 .grid {
   width: 100%;
-  background-color: blue;
   @include clearfix;
+  margin-top: $baseLineHeight;
+  margin-bottom: $baseLineHeight;
+  p {
+    margin-top: 0;
+    margin-bottom: 0;
+  }
 }
 
 [class*='col-'] {
@@ -19,7 +24,7 @@ $grid-padding: 20px;
 }
 
 .grid-pad {
-  padding: $grid-padding 0 $grid-padding $grid-padding;
+  padding: 0 0 0 $grid-padding;
   & > [class*='col-']:last-of-type {
     padding-right: $grid-padding;
   }

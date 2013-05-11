@@ -1,0 +1,33 @@
+.well {
+  padding: $baseLineHeight;
+  background-color: $wellGrey;
+  h1, h2, h3 {
+    margin-top: 0;
+  }
+}
+
+.well-stripe {
+  @extend .well;
+  @include diagonalStripeBackground($wellGrey, 2%);
+}
+
+.well-blue {
+  @extend .well;
+  background-color: $wellHighlight;
+}
+
+.well-blue-stripe {
+  @extend .well-blue;
+  @include diagonalStripeBackground($wellHighlight, 2%);
+}
+
+.well-inversed {
+  @extend .well;
+  background-color: $mainHighlightColor;
+  color: $mainBackgroundColor;
+}
+
+.well-inversed-stripe {
+  @extend .well-inversed;
+  @include diagonalStripeBackground($mainHighlightColor, 4%);
+}

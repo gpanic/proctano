@@ -1,2 +1,31 @@
 .content {
 }
+
+@mixin highlight-triangle {
+  content: '';
+  display: inline-block;
+  width: 0;
+  height: 0;
+  border-left: 120px solid transparent;
+  border-right: 120px solid transparent;
+  position: absolute;
+  top: 0;
+  z-index: -100;
+}
+
+h1.highlight {
+  position:relative;
+  background-color: $greyLighter;
+  padding-top: $baseLineHeight / 2;
+  padding-bottom: $baseLineHeight / 2;
+  &:after {
+    @include highlight-triangle;
+    border-bottom: 3 * $baseLineHeight / 2  solid $greyLighter;
+    right: -120px;
+  }
+  &:before {
+    @include highlight-triangle;
+    border-top: 3 * $baseLineHeight / 2  solid $greyLighter;
+    left: -120px;
+  }
+}

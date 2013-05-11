@@ -28,9 +28,11 @@ h1 {
   line-height: $baseLineHeight / 2;
   margin-top: $baseLineHeight / 2;
   margin-bottom: $baseLineHeight/ 2;
+  &.light {
+    font-weight: 200;
+  }
 }
 h2 {
-  color: lighten($baseTextColor, 20%);
   font-weight: 600;
   font-size: 1.5em;
   line-height: $baseLineHeight / 1.5;
@@ -38,7 +40,6 @@ h2 {
   margin-bottom: $baseLineHeight / 1.5;
 }
 h3 {
-  color: lighten($baseTextColor, 30%);
   font-weight: 500;
   font-size: 1.125em;
   line-height: $baseLineHeight / 1.125;

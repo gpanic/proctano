@@ -2,11 +2,12 @@
 
 // Scaffolding
 $mainBackgroundColor: white;
+$mainHighlightColor: $blue;
 
 // Navbar
 $navbarBackgroundColor: rgba(255, 255, 255, 0.95);
 $navbarBrandFontFamily: $sansSerifFontFamily;
-$navbarBrandTextColor: $gray;
+$navbarBrandTextColor: $grey;
 $navbarBrandTextSize: 21px;
 $navbarBrandFontWeight: 600;
 $navbarFontSize: 15px;
@@ -19,7 +20,7 @@ $navbarLogoHeight: 60px;
 $navbarLogoWidth: 47px;
 $navbarPaddingHorizontal: 10px;
 $navbarStroke: 0px;
-$navbarTextColor: $gray;
+$navbarTextColor: $grey;
 
 // Content Header
 $cHeadBackgroundColor: $blue;
@@ -38,9 +39,13 @@ $logo: url('../images/proctano_logo.svg');
 $baseFontFamily: $sansSerifFontFamily;
 $baseFontSize: 18px;
 $baseLineHeight: 1.4em;
-$baseTextColor: $gray;
+$baseTextColor: $grey;
 
 // Links
 $baseLinkColor: $blue;
 $baseLinkHoverColor: darken($baseLinkColor, 20%);
 $hoverTransitionTime: 0.2s;
+
+// Well
+$wellGrey: $greyLighter;
+$wellHighlight: $blueLighter;

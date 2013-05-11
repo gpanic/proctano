@@ -25,3 +25,13 @@
 @mixin centerPad($lineHeight, $containerHeight, $horizontalPadding) {
   padding: ($containerHeight - $lineHeight) / 2 $horizontalPadding;
 }
+
+@mixin diagonalStripeBackground($color, $lighten) {
+  background: linear-gradient(
+                45deg,
+                $color,
+                $color 50%,
+                lighten($color, $lighten) 50%,
+                lighten($color, $lighten) 100%
+              );
+}
